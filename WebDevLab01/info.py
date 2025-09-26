@@ -70,7 +70,7 @@ spoken_data = {
 leadership_data = {"Art Club Leader": (["- Brought painting activities for students"],"Images/Art.jpg"),
 
 }
-activity_data={
-    "Project Sunshine": ["- Volunteered at CHOA events", 
-            "- Provided kids with creative activities for them to do"]
-}
+
+activity_data = {
+    "Project Sunshine": (
+        ["- Volunteered at CHOA events", "- Provided kids with creative activities for them to do"],"project_sunshine.jpg"}
