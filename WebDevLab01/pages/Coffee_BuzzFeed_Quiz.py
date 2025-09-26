@@ -28,6 +28,17 @@ for img_file in images:
     else:
         st.warning(f"Image {img_file} not found!")
 
+current_dir = os.path.dirname(__file__)
+
+images = ["blackcoffee.jpeg", "pumpkinlattee.jpg", "flavoredcoffee.jpg", "milkycoffee.jpg"]
+
+for img_file in images:
+    image_path = os.path.join(current_dir, "../Images", img_file)  # "../Images" relative to pages/
+    if os.path.exists(image_path):
+        st.image(image_path)
+    else:
+        st.warning(f"Image {img_file} not found!")
+
 st.image("Images/blackcoffee.jpeg")
 st.image("Images/pumpkinlattee.jpg")
 st.image("Images/flavoredcoffee.jpg")
