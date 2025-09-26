@@ -52,14 +52,19 @@ def education_section(education_data,course_data):
 education_section(info.education_data,info.course_data)
 
 #Professional Experience
-
 def experience_section(experience_data):
     st.header("Professional Experience")
-    for job_title, (job_description, image) in experience_data.items():
+    current_dir = os.path.dirname(__file__)
+    for job_title, (job_description, image_filename) in experience_data.items():
         expander = st.expander(f"{job_title}")
-        expander.image(image, width=250)
+        image_path = os.path.join(current_dir, "../Images", image_filename)
+        if os.path.exists(image_path):
+            expander.image(image_path, width=250)
+        else:
+            expander.warning("Image not found!")
         for bullet in job_description:
             expander.write(bullet)
+    
     st.write("---")
 experience_section(info.experience_data)
 
