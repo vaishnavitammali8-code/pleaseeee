@@ -19,11 +19,6 @@ coffee_strength = st.slider("How strong do you like your coffee?",
 fav_season = st.radio("What's your favorite season?",
                       ["Spring 🌸", "Summer ☀️", "Fall 🍂", "Winter ❄️"]
                       )
-st.image("Images/blackcoffee.jpeg")
-st.image("Images/pumpkinlattee.jpg")
-st.image("Images/flavoredcoffee.jpg")
-st.image("Images/milkycoffee.jpg")
-
 current_dir = os.path.dirname(__file__)
 images = ["blackcoffee.jpeg", "pumpkinlattee.jpg", "flavoredcoffee.jpg", "milkycoffee.jpg"]
 for img_file in images:
@@ -33,6 +28,10 @@ for img_file in images:
     else:
         st.warning(f"Image {img_file} not found!")
 
+st.image("Images/blackcoffee.jpeg")
+st.image("Images/pumpkinlattee.jpg")
+st.image("Images/flavoredcoffee.jpg")
+st.image("Images/milkycoffee.jpg")
 
 if st.button("See your coffee personality!"): #NEW
     st.write("Calculating your coffee personality...")
