@@ -23,6 +23,16 @@ st.image("Images/pumpkinlattee.jpg")
 st.image("Images/flavoredcoffee.jpg")
 st.image("Images/milkycoffee.jpg")
 
+current_dir = os.path.dirname(__file__)
+images = ["blackcoffee.jpeg", "pumpkinlattee.jpg", "flavoredcoffee.jpg", "milkycoffee.jpg"]
+for img_file in images:
+    image_path = os.path.join(current_dir, "../Images", img_file)
+    if os.path.exists(image_path):
+        st.image(image_path)
+    else:
+        st.warning(f"Image {img_file} not found!")
+
+
 if st.button("See your coffee personality!"): #NEW
     st.write("Calculating your coffee personality...")
     st.progress(100) #NEW
