@@ -29,10 +29,6 @@ for img_file in images:
     else:
         st.warning(f"Image {img_file} not found!")
 
-st.image("Images/blackcoffee.jpeg")
-st.image("Images/pumpkinlattee.jpg")
-st.image("Images/flavoredcoffee.jpg")
-st.image("Images/milkycoffee.jpg")
 
 if st.button("See your coffee personality!"): #NEW
     st.write("Calculating your coffee personality...")
