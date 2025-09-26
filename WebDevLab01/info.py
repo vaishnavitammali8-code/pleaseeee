@@ -73,4 +73,10 @@ leadership_data = {"Art Club Leader": (["- Brought painting activities for stude
 
 activity_data = {
     "Project Sunshine": (
-        ["- Volunteered at CHOA events", "- Provided kids with creative activities for them to do"],"project_sunshine.jpg"}
+        [
+            "- Volunteered at CHOA events",
+            "- Provided kids with creative activities for them to do"
+        ],
+        "project_sunshine.jpg"
+    )
+}
